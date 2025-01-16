@@ -1,5 +1,7 @@
 # neuralrep-llm
-Official repository for the abstract "Neural Representational Geometry of Concepts in Large Language Models" (NeurIPS 2024)
+Official repository for the paper "Neural Representational Geometry of Concepts in Large Language Models" (Neurips 2024 Workshop on Symmetry and Geometry in Neural Representations)
+
+For more information about the workshop, please visit the [NeurReps website](https://www.neurreps.org/about).
 
 Below is a high-level overview of each relevant file. The code is structured into modules based on functionality:
 
@@ -36,6 +38,32 @@ Below is a high-level overview of each relevant file. The code is structured int
 
 - <strong>config.py</strong>:  
   Centralizes all directory paths, environment variables, constants (like layer indices, categories, number of sentences, etc).
+
+---
+
+## Requirements
+
+Below are some of the main packages and their versions taken from our conda environment file (environment.yml):
+
+- Python: 3.10.14
+- PyTorch: 2.2.2
+- Transformers: 4.47.0
+- Accelerate: 0.29.3
+- Datasets: 2.19.0
+- HuggingFace Hub: 0.26.5
+- PyYAML: 6.0.1
+- scikit-learn: 1.4.2
+- TensorFlow: 2.16.1
+- wandb: 0.16.6
+
+These and other dependencies can be found in the [environment.yml](environment.yml) file. To create and activate this environment:
+
+```bash
+conda env create -f environment.yml
+conda activate neurrep-llm-env
+```
+
+This setup ensures that all dependencies are installed and compatible with the codebase.
 
 ---
 
