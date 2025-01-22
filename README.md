@@ -16,6 +16,10 @@ Below is a high-level overview of each relevant file. The code is structured int
 - <strong>modules/generate_sentences.py</strong>:  
   Uses the OpenAI GPT-based model to generate category-specific sentences (manifold sentences) for training and evaluation.  
 
+  #### Category Definitions
+  The code assumes that the sentences have already been generated using GPT-4 using the prompt found in `generate_categories.py`.  
+  The category types and amount are specified in `config.py`.
+
 - <strong>modules/generate_embeddings.py</strong>:  
   Generates embeddings using a LLaMA model via huggingface transformers. Each sentence is encoded, and the averaging of token embeddings is done per layer.
 
@@ -37,7 +41,7 @@ Below is a high-level overview of each relevant file. The code is structured int
   Utility methods for reading and writing JSON, Pickle files, etc.
 
 - <strong>config.py</strong>:  
-  Centralizes all directory paths, environment variables, constants (like layer indices, categories, number of sentences, etc).
+  Centralizes all directory paths, environment variables, constants (like layer indices, categories, number of sentences, etc). 
 
 ---
 
